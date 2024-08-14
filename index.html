@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Main menu</title>
+    <style>
+        @font-face {
+            font-family: Poppins;
+            src: url(./styles/fonts/Poppins-Medium.ttf);
+        }
+        * {
+            font-family: Poppins;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #001020; /* Dark blue background */
+            color: #fff; /* White text */
+        }
+        .categories {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+        }
+        h2 {
+            display: flex;
+            margin-bottom: 90px;
+            margin-top: 50px;
+            justify-content: center;
+            font-size: xx-large;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .boxes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-size: larger;
+            margin-right: 40px;
+        }
+        header {
+            background-color: #00274e; /* Darker blue for header */
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ENGLISH APP 1.4</h1>
+        </div>
+    </header>
+    
+    <main>
+        <h2>Pick a category:</h2>
+        <section class="categories">
+                <div id="grammar-box" class="boxes">
+                    <img src="./assets/ICON building blocks.webp" alt="grammar" id="grammar-image">
+                    <a href="./DIRECTORY 2 - GRAMMAR MENU.html" id="link-grammar">Practice Grammar</a>
+                </div>
+                <div id="vocabulary-box" class="boxes">
+                    <img src="./assets/ICON vocabulary.png" alt="vocabulary" id="vocabulary-image">
+                    <a href="./DIRECTORY 3 - VOCABULARY MENU.html" id="link-vocabulary">Practice Vocabulary</a>
+                </div>
+                <div id="verb-box" class="boxes">
+                    <img src="./assets/ICON verbs.png" alt="verb" id="verb-image">
+                    <a href="./VERB list.html" id="link-verb">Practice Irregular Verbs</a>
+                </div>
+                <div id="extra-box" class="boxes">
+                    <img src="./assets/box.png" alt="extra" id="extra-image">
+                    <a href="#" id="link-extra">Extra exercises</a>
+                </div>
+        </section>
+    </main>
+
+    <script>
+        
+            document.getElementById('vocabulary-image').addEventListener('click', function() {
+                window.location.href = document.getElementById('link-vocabulary').href;
+            });
+
+            document.getElementById('grammar-image').addEventListener('click', function() {
+                window.location.href = document.getElementById('link-grammar').href;
+            });
+
+            document.getElementById('verb-image').addEventListener('click', function() {
+                window.location.href = document.getElementById('link-verb').href;
+            });
+
+            document.getElementById('extra-image').addEventListener('click', function() {
+                window.location.href = document.getElementById('link-extra').href;
+            });
+
+    </script>
+</body>
+</html>

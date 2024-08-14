@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Vocabulary Menu</title>
+    <style>
+        @font-face {
+            font-family: Poppins;
+            src: url(./styles/fonts/Poppins-Medium.ttf);
+        }
+        * {
+            font-family: Poppins;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #001020;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        button {
+            height: 40px;
+            width: 150px;
+            border-radius: 5px;
+            background-color:#00376f;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        nav {
+            background-color: #00274e;
+            padding: 10px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 60px;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+            margin-top: 50px;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #containerLeft, #containerRight {
+            width: 48%;
+        }
+
+        #containerRight {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div {
+            margin: 20px 0;
+            background-color: #00376f;
+            border-radius: 5px;
+            padding: 20px;
+            
+        }
+        h {
+            display: block;
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            margin-left: 10px;
+            font-size: large;
+        }
+        a:hover {
+            color: lightblue;
+        }
+        h:hover {
+            color: lightblue;
+        }
+
+        .level-boxes {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        PRACTICE VOCABULARY
+    </nav>
+    <section id="container">
+        <section id="containerLeft">
+            <a href="./DIRECTORY 1 - MAIN MENU.html">
+                <button>↩️ Go back</button>
+            </a>
+            <div>
+                <h onclick="showList1()">LEVEL 1</h>
+                <div id="level1-box" class="level-boxes">
+                    <a href="./1 VOCABULARY fruits/fruits-unscramble.html">Fruits</a><br>
+                    <a href="./1 VOCABULARY vegetables/vegetables-intro1.html">Vegetables</a><br>
+                    <!-- <a href="./404 page.html">XXXXX</a><br> -->
+                </div>
+            </div>
+            <div>
+                <h onclick="showList2()">LEVEL 2</h>
+                <div id="level2-box" class="level-boxes">
+                    <!-- <a href="./404 page.html">Gerunds</a><br> -->
+                    <!-- <a href="./404 page.html">There is / There are</a><br> -->
+                    <!-- <a href="./404 page.html">Indirect objects</a><br> -->
+                    <!-- <a href="./404 page.html">Prepositions: to VS for</a><br> -->
+                    <!-- <a href="./Comparatives 1.html">Comparatives</a><br> -->
+                    <!-- <a href="./Infinitives VS Gerunds 1.html">Infinitives or Gerunds: to Vs -ing</a><br> -->
+                    <!-- <a href="./404 page.html">Preposition + Verb-ing</a><br> -->
+                    <!-- <a href="./404 page.html">Imperatives</a><br> -->
+                    <!-- <a href="./0 GRAMMAR present perfect/present_perfect_affirmative1.html">Present perfect</a><br> -->
+                    <!-- <a href="./404 page.html">Will, may, might</a><br> -->
+                    <!-- <a href="./a or an.html">Zero and first conditional</a><br> -->
+                    <a href="./404 page.html">EXTRA: Some VS Any</a><br>
+                </div>
+            </div>
+            <div>
+                <h onclick="showList3()">LEVEL 3</h>
+                <div id="level3-box" class="level-boxes">
+                    <a href="./404 page.html">Chronological connectors</a><br>
+                    <a href="./404 page.html">Present perfect and Present perfect progressive</a><br>
+                    <a href="./404 page.html">Comparatives</a><br>
+                    <a href="./404 page.html">Future arrangements</a><br>
+                    <a href="./Second conditional.html">Second conditional</a><br>
+                    <a href="./So and such 1.html">So and Such</a><br>
+                    <a href="./404 page.html">Reflexives</a><br>
+                    <a href="./a or an.html">Passive voice</a>
+                    <a href="./404 page.html">Prepositions of place</a><br>
+                    <a href="./404 page.html">Indefinite pronouns</a><br>
+                    <a href="./Past perfect.html">Past perfect</a><br>
+                </div>
+            </div>
+            <div>
+                <h onclick="showList4()">LEVEL 4</h>
+                <div id="level4-box" class="level-boxes">
+                    <a href="./404 page.html">Past conjugations</a><br>
+                    <a href="./404 page.html">Third conditional</a><br>
+                    <a href="./a or an.html">Speculating in the past</a><br>
+                    <a href="./404 page.html">Causative verbs</a><br>
+                    <a href="./404 page.html">Be supposed to</a><br>
+                    <a href="./a or an.html">Neither/nor, either/or, rather/than</a>
+                    <a href="./404 page.html">Verb patterns</a><br>
+                    <a href="./a or an.html">Question tags</a>
+                </div>
+            </div>
+        </section>
+        <section id="containerRight">
+            <img src="./assets/ICON vocabulary.png" alt="grammarPicture">
+        </section>
+    </section>
+    <script>
+
+        window.addEventListener('load', hideLists)
+
+        function hideLists() {
+        let boxes = [level1Box, level2Box, level3Box, level4Box];
+        boxes.forEach(box => {
+            box.style.display = 'none';
+        });
+    }
+
+        let level1Box = document.getElementById('level1-box');
+        let level2Box = document.getElementById('level2-box');
+        let level3Box = document.getElementById('level3-box');
+        let level4Box = document.getElementById('level4-box');
+    
+        function toggleList(listElement) {
+            if (listElement.style.display === "block") {
+                listElement.style.display = "none";
+            } else {
+                listElement.style.display = "block";
+            }
+        }
+    
+        function showList1(){
+            toggleList(level1Box);
+        }
+    
+        function showList2(){
+            toggleList(level2Box);
+        }
+    
+        function showList3(){
+            toggleList(level3Box);
+        }
+    
+        function showList4(){
+            toggleList(level4Box);
+        }
+    </script>
+    
+</body>
+</html>
